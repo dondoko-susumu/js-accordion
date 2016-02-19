@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>css accordion</title>
+  <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <style>
+    label {
+      background: green;
+      color: #fff;
+      padding: 10px;
+      display: block;
+      margin: 0;
+      border: 1px solid #fff;
+    }
+
+    input[type="checkbox"].on-off{
+      display: none;
+    }
+
+    .menu ul {
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .menu li {
+      padding: 5px;
+    }
+
+    input[type="checkbox"].on-off + ul{
+      height: 0;
+      overflow: hidden;
+    }
+
+    input[type="checkbox"].on-off:checked + ul{
+      height: 200px;
+    }
+    #Panel2 {
+      background: green;
+      color: #fff;
+      padding: 10px;
+      display: block;
+      margin: 0;
+      border: 1px solid #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>css</h1>
+  <div class="menu">
+    <label for="Panel1">ボタン1</label>
+    <input type="checkbox" id="Panel1" class="on-off" />
+    <ul>
+      <li><a href="">リンク1</a></li>
+      <li><a href="">リンク</a></li>
+      <li><a href="">リンク</a></li>
+      <li><a href="">リンク</a></li>
+      <li><a href="">リンク</a></li>
+    </ul>
+  </div>
+
+  <h1>js</h1>
+
+  <style>
+    #acMenu dt{
+      background: green;
+      color: #fff;
+      padding: 10px;
+      display: block;
+      margin: 0;
+      border: 1px solid #fff;
+      width:100%;
+      cursor:pointer;
+    }
+    #acMenu dd{
+      width:200px;
+      height:270px;
+      display:none;
+      margin: 0;
+      padding: 0;
+    }
+    .menu2 ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .menu2 li {
+      padding: 5px;
+    }
+  </style>
+  <dl id="acMenu">
+    <dt>ボタン2</dt>
+    <dd class="menu2">
+    <ul>
+      <li><a href="">リンク1</a></li>
+      <li><a href="">リンク</a></li>
+      <li><a href="">リンク</a></li>
+      <li><a href="">リンク</a></li>
+      <li><a href="">リンク</a></li>
+    </ul>
+    </dd>
+  </dl>
+  <script>
+    $(function(){
+      $("#acMenu dt").on("click", function() {
+        $(this).next().slideToggle(300,"linear");
+      });
+    });
+  </script>
+</body>
+</html>
