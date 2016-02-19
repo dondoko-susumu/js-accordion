@@ -5,3 +5,6 @@ http://9-bb.com/css%E3%81%A0%E3%81%91%E3%81%A7%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%
 
 * js
 http://liginc.co.jp/web/js/jquery/34048
+
+* jQuery.animate vs CSS.transition
+http://dotnsf.blog.jp/archives/1000071340.html
