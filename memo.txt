@@ -1,3 +1,44 @@
+2016/02/22
+
+* cubic-accodion解析
+
+・ボタン部とアコーディオン部をwarpperするdivにoverflow:hidden,z-index:(後ろに隠す)でアコーディオン部を非表示
+・アコーディオン部の初期位置はアコーディオン下辺とボタン部下辺を合わせた位置にする(top:-38px)
+・アニメーションはtransleate3d(0,86px)
+・下の項目も同じだけtransleate3d(0,86px)
+
+* transition (時間的変化)
+http://www.htmq.com/css3/transition.shtml
+transitionプロパティは、transition効果（時間的変化）をまとめて指定する際に使用します。  
+transitionプロパティでは、 transition-property、 transition-duration、 transition-timing-function、 transition-delay	の各プロパティの値を、まとめて指定することができます。  
+このプロパティでは、値を指定する順序が重要となります。 時間として指定される最初の値はtransition-durationに割り当てられ、 時間として指定される二番目の値はtransition-delayに割り当てられます。  
+複数の種類のCSSプロパティに対してtransition効果を適用する場合には、値のセットをカンマ（ , ）で区切って指定します。  
+
+- ■値
+各プロパティの値をスペースで区切って指定  
+```
+transition-propertyの値 transition-durationの値 transition-timing-functionの値 transition-delayの値の順で指定する
+```
+
+- ■初期値
+```
+transition-propertyはnone、 transition-durationは0、 transition-timing-functionはease、 transition-delayは0
+```
+
+* transition-property (変化させるcss属性)
+http://www.htmq.com/css3/transition-property.shtml
+transition-propertyプロパティは、transition（時間的変化）効果を適用するCSSプロパティ名を指定する際に使用します。  
+複数のCSSプロパティに変化を適用する場合には、変化させるプロパティのリストをカンマ区切りで指定します。  
+値にnoneを指定すると、どのプロパティも変化しません。 また、allを指定すると、変化を適用できるプロパティすべてが変化します。  
+
+- 例
+```
+transition-property: background-color, width, height;
+```
+* transition-timing-function (緩急 easing)
+http://www.htmq.com/css3/transition-timing-function.shtml
+
+
 2016/02/19
 
 * css
@@ -8,3 +49,5 @@ http://liginc.co.jp/web/js/jquery/34048
 
 * jQuery.animate vs CSS.transition
 http://dotnsf.blog.jp/archives/1000071340.html
+
+
